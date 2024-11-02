@@ -1,0 +1,550 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  scroll-behavior: smooth;
+  font-family: 'Poppins', sans-serif;
+}
+
+:root {
+  --bg-color: #000000;
+  --second-bg-color: #161616;
+  --text-color: #ffffff;
+  --main-color: #c70b0b;
+}
+.light-mode {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --main-color: #007acc;
+}
+
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+  font-size: 1.0rem;
+  line-height: 1.6;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 2rem 5%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+  transition: background 0.3s ease;
+}
+
+.header:hover {
+  background: rgba(0, 0, 0, 0.9);
+}
+
+.logo h1 {
+  font-size: 2.5rem;
+  color: var(--main-color);
+  font-weight: 800;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.logo h1:hover {
+  transform: scale(1.1);
+}
+
+.navbar ul {
+  display: flex;
+  gap: 2rem;
+}
+
+.navbar a {
+  font-size: 1.0rem;
+  color: var(--main-color);
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.navbar a:hover {
+  color: var(--text-color);
+  transform: translateY(-3px);
+}
+
+.navbar a.active {
+  color: var(--main-color);
+  border-bottom: 2px solid var(--main-color);
+}
+
+.search-bar input {
+  padding: 0.8rem;
+  border-radius: 5px;
+  border: none;
+  background: #333;
+  color: #fff;
+  transition: background 0.3s;
+}
+.search-bar input:focus {
+  background: var(--text-color);
+}
+
+.home, .world, .latest-news {
+  padding: 10rem 5%;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.home h2, .world h2, .latest-news h2 {
+  font-size: 2.0rem;
+  margin-bottom: 1rem;
+  color: var(--main-color);
+}
+
+.home p, .world p, .latest-news p {
+  margin-top: 1rem;
+  font-size: 1.0rem;
+  color: var(--text-color);
+}
+.home {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10rem 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+    color: var(--text-color);
+    background: linear-gradient(45deg, var(--bg-color), var(--second-bg-color));
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgb(255, 0, 0);
+  }
+  
+  .welcome-container {
+    max-width: 50%;
+    text-align: left;
+    margin-right: 2rem;
+    animation: fadeInLeft 1s ease;
+  }
+  
+  .welcome-container h2 {
+    font-size: 2.5rem;
+    color: var(--main-color);
+  }
+  
+  .welcome-container p {
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+  
+  .explore-button {
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 0.8rem 1.5rem;
+    background-color: var(--main-color);
+    color: var(--text-color);
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 25px;
+    transition: background 0.3s ease;
+  }
+  .explore-button:hover {
+    background-color: #a30a0a;
+  }
+  
+  .featured-article {
+    max-width: 45%;
+    text-align: left;
+    animation: fadeInRight 1s ease;
+  }
+  
+  .featured-article h3 {
+    font-size: 1.8rem;
+    color: var(--main-color);
+    margin-bottom: 0.8rem;
+  }
+  
+  .featured-article img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    margin-bottom: 1rem;
+  }
+  
+  .featured-article p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  .read-more {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    color: #fff;
+    background-color: var(--main-color);
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .read-more:hover {
+    background-color: #a30a0a;
+  }
+  
+  /* Animations */
+  @keyframes fadeInLeft {
+    from { opacity: 0; transform: translateX(-20px); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+  
+  @keyframes fadeInRight {
+    from { opacity: 0; transform: translateX(20px); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+/* World Section */
+.world {
+    padding: 8rem 5%;
+    background: linear-gradient(45deg, var(--bg-color), var(--second-bg-color));
+    color: var(--text-color);
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgb(255, 0, 0);
+    margin-top: 4rem;
+  }
+  
+  .world-intro {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .world-intro h2 {
+    font-size: 2.5rem;
+    color: var(--main-color);
+    margin-bottom: 0.5rem;
+  }
+  
+  .world-intro p {
+    font-size: 1.1rem;
+    color: var(--text-color);
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+  
+  .world-articles {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .world-article {
+    background-color: var(--bg-color);
+    border-radius: 10px;
+    padding: 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 20px rgb(255, 0, 0);
+  }
+  
+  .world-article:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  }
+  
+  .world-article h3 {
+    font-size: 1.5rem;
+    color: var(--main-color);
+    margin-bottom: 0.5rem;
+  }
+  
+  .world-article img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 1rem 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .world-article p {
+    font-size: 1rem;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+  }
+  
+  .read-more {
+    display: inline-block;
+    padding: 0.6rem 1.2rem;
+    color: #fff;
+    background-color: var(--main-color);
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    font-weight: 500;
+  }
+  
+  .read-more:hover {
+    background-color: #a30a0a;
+  }
+    /* Latest News Section */
+.latest-news {
+    padding: 8rem 5%;
+    background: linear-gradient(45deg, var(--bg-color), var(--second-bg-color));;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgb(255, 0, 0);
+    color: var(--text-color);
+    margin-top: 4rem;
+  }
+  
+  .latest-news-header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .latest-news-header h2 {
+    font-size: 2.5rem;
+    color: var(--main-color);
+  }
+  
+  .latest-news-header p {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.5;
+  }
+  
+  .latest-news-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+  }
+  
+  .news-card {
+    background-color: var(--bg-color);
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgb(255, 0, 0);
+    width: 300px;
+    padding: 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+  }
+  
+  .news-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  }
+  
+  .news-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: inherit;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    transition: opacity 0.3s ease;
+  }
+  
+  .news-card:hover img {
+    opacity: 0.9;
+  }
+  
+  .news-card h3 {
+    font-size: 1.3rem;
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+  }
+  
+  .news-card p {
+    font-size: 1rem;
+    color: var(--text-color);
+    line-height: 1.5;
+    margin-bottom: 1rem;
+  }
+  
+  .read-more {
+    display: inline-block;
+    padding: 0.6rem 1.2rem;
+    color: #ffffff;
+    background-color: var(--main-color);
+    border-radius: 5px;
+    font-weight: 500;
+    text-align: center;
+    transition: background-color 0.3s ease;
+  }
+  
+  .read-more:hover {
+    background-color: var(--bg-color);
+  }
+  /* Technology Section */
+  .technology {
+    padding: 5rem 5%;
+    background: linear-gradient(45deg, var(--bg-color), var(--second-bg-color));;
+    color: var(--text-color);
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgb(255, 0, 0);
+    margin-top: 4rem;
+  }
+  
+  .technology-header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .technology-header h2 {
+    font-size: 2.5rem;
+    color: var(--main-color);
+  }
+  
+  .technology-header p {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.5;
+  }
+  
+  .technology-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+  }
+  
+  .tech-card {
+    background-color: var(--bg-color);
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgb(255, 0, 0);
+    width: 300px;
+    padding: 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .tech-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  }
+  
+  .tech-card h3 {
+    font-size: 1.5rem;
+    color: var(--main-color);
+    margin-bottom: 0.5rem;
+  }
+  
+  .tech-card p {
+    font-size: 1rem;
+    color: var(--text-color);
+    line-height: 1.5;
+  }
+  .read-more {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    color: var(--text-color);
+    background-color: var(--main-color);
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    text-decoration: none; /* Remove underline */
+  }
+  
+  .read-more:hover {
+    background-color: var(--main-color);
+  }
+  .lifestyle {
+    background: linear-gradient(45deg, var(--bg-color), var(--second-bg-color));
+        padding: 10rem 5%;
+        max-width: 1200px;
+        margin: 2rem auto 0; /* Added margin-top */
+        text-align: center;
+        box-shadow: 0 4px 12px rgb(255, 0, 0);
+  }
+  .lifestyle-header h2 {
+    font-size: 2.0rem;
+    margin-bottom: 1rem;
+    color: var(--main-color);
+  }
+  
+  .lifestyle-header p {
+    margin-top: 1rem;
+    font-size: 1.0rem;
+    color: var(--text-color);
+  }
+  
+  .lifestyle-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+  }
+  
+  .lifestyle-card {
+    background-color: var(--bg-color);
+    box-shadow: 0 4px 12px rgb(255, 0, 0);
+    border-radius: 8px;
+    padding: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex: 0 1 calc(25% - 2rem); /* Responsive card sizing */
+    max-width: 300px; /* Optional max-width for cards */
+  }
+  
+  .lifestyle-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 12px rgb(0, 0, 0);
+  }
+  
+  .lifestyle-card h3 {
+    font-size: 1.5rem;
+    color: var(--main-color);
+  }
+  
+  .lifestyle-card p {
+    color: var(--text-color);
+  }
+  footer {
+    padding: 2rem;
+    background-color: var(--second-bg-color);
+    text-align: center;
+    color: #bbb;
+    border-top: 2px solid var(--main-color); /* Add a top border */
+  }
+  
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .footer-content p {
+    margin: 0.5rem 0;
+  }
+  
+  footer a {
+    color: var(--main-color);
+    margin: 0 0.5rem;
+    transition: color 0.3s ease;
+  }
+  
+  footer a:hover {
+    color: #fff; /* Change color on hover */
+  }
+  
+  .social-media {
+    margin-top: 1rem; /* Space between text and social media icons */
+  }
+  
+  .social-icon {
+    display: inline-block;
+    margin: 0 0.5rem;
+    font-size: 1.5rem; /* Size for social media icons */
+    color: var(--main-color);
+    transition: color 0.3s ease;
+  }
+  
+  .social-icon:hover {
+    color: #fff; /* Change color on hover */
+  }
+  
